@@ -18,7 +18,7 @@ def randList() -> list:
 
 # pre  -- takes an integer
 # post -- returns a list of the size of the specified integer containing random integers
-def randList(size: int) -> list:
+def randListConstSize(size: int) -> list:
     lst = []
 
     for i in range(size):
