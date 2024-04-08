@@ -32,5 +32,5 @@ def get_data(size: int) -> list:
     lst = []
     for i in range(size):
         lst.append(randList())
-        
+
     return lst
