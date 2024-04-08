@@ -1,13 +1,12 @@
 import ListGenerator
 import time
 
-#
-#
 
-
-
-
-def measure_execution(func, random_lst):
+# pre: take in a sorting algorithm and list of lists that contains random integers fo random sizes
+# find and record time for each list
+# determine averages
+# post: display results
+def measure_execution(func: staticmethod, random_lst: list) -> None:
     # for number of times we want to measure:
     exec_times_lst = []
 
