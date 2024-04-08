@@ -25,3 +25,12 @@ def randListConstSize(size: int) -> list:
         lst.append(random.randint(0, 1000))
 
     return lst
+
+# pre  -- takes integer representing size of data
+# post -- returns a list of randomly generated lists
+def get_data(size: int) -> list:
+    lst = []
+    for i in range(size):
+        lst.append(randList())
+        
+    return lst

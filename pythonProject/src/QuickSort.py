@@ -2,14 +2,14 @@
 
 import statistics
 import copy
-import MeasureExectution
+import MeasureExecution
 
 
 # pre  -- takes a list
 # post -- sorts and returns the list
 def quick_sort(lst: list) -> list:
 
-    if len(lst) <= 1:                  # base case: list has less than 2 elements in it
+    if len(lst) <= 1:                  # base case: list has one (or less) elements in it
         return lst
 
     pivot = select_pivot(lst)          # select a pivot
