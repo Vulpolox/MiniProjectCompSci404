@@ -1,5 +1,5 @@
 # Luke Hill's Counting Sort Algorithm
-import MeasureExectution
+import MeasureExecution
 import time
 
 # counting sort functions [call countsort(list) for sorted]:
