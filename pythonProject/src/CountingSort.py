@@ -1,6 +1,7 @@
 # Luke Hill's Counting Sort Algorithm
 import MeasureExecution
 import time
+import ListGenerator
 
 # counting sort functions [call countsort(list) for sorted]:
 # ------------------------------------------------------------
@@ -51,5 +52,5 @@ def count_sort(lst: list) -> list:
 
     return sorted_lst
 
-MeasureExecution.measure_execution(count_sort)
+MeasureExecution.measure_execution(count_sort, ListGenerator.get_data(1000))
 

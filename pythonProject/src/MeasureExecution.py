@@ -5,18 +5,18 @@ import time
 #
 
 
-def measure_execution(func):
+
+
+def measure_execution(func, random_lst):
     # for number of times we want to measure:
-    num_times = 100
     exec_times_lst = []
 
-    # running the sort algorithm for numtimes
-    for i in range(num_times):
+    # running the sort algorithm for size of imported list of lists
+    for i in random_lst:
         lst = []
         begin = time.time()  # record time beginning
-        rand_lst = ListGenerator.randList()
-        lst.append(len(rand_lst))
-        func(ListGenerator.randList())
+        lst.append(len(i))
+        func(i)
         end = time.time()  # record time ending
         lst.append(end - begin)
         exec_times_lst.append(lst)  # add lst with two values (size, time) for each
@@ -39,9 +39,9 @@ def measure_execution(func):
     # display ultimate results
     print("\n")
     print("Sort Results: ".center(53))
-    print(f"(Over {num_times} iterations)".center(52))
+    print(f"(Over {len(random_lst)} iterations)".center(52))
     print("-"*53)
-    print(f"Average time: {avg / num_times:<12.10f} | Average size:    {avg_size / num_times:>6.2f}")
+    print(f"Average time: {avg / len(random_lst):<12.10f} | Average size:    {avg_size / len(random_lst):>6.2f}")
     print(f"Worst time:   {max_time[1]:<12.10f} | Size:             {max_time[0]:>6}")
     print(f"Best time:    {min_time[1]:<12.10f} | Size:             {min_time[0]:>6}")
     print("-" * 53)
