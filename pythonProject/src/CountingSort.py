@@ -1,5 +1,5 @@
 # Luke Hill's Counting Sort Algorithm
-import ListGenerator
+import measureExecution
 import time
 
 # counting sort functions [call countsort(list) for sorted]:
@@ -51,49 +51,5 @@ def countsort(lst: list) -> list:
 
     return sortedlst
 
-# ------------------------------------------------------------
-# runtime tracking functions:
-
-def measureexecution():
-    # for number of times we want to measure:
-    numtimes = 100
-    exectimeslst = []
-
-    # running the sort algorithm for numtimes
-    for i in range(numtimes):
-        lst = []
-        begin = time.time()  # record time beginning
-        randlst = ListGenerator.randList()
-        lst.append(len(randlst))
-        countsort(ListGenerator.randList())
-        end = time.time()  # record time ending
-        lst.append(end - begin)
-        exectimeslst.append(lst)  # add lst with two values (size, time) for each
-
-    avg = 0
-    avgsize = 0
-    kor = False  # set true if want individual information of each size/runtime
-
-    # display individual results if turned on using bool kor, otherwise calculates average time and size
-    for i in exectimeslst:
-        if kor:
-            print(f"Input size: {i[0]} | Execution time: {i[1]}s\n")
-        avg += i[1]
-        avgsize += i[0]
-
-    # find best/worst cases
-    maxtime = max(exectimeslst, key=lambda x: x[1])
-    mintime = min(exectimeslst, key=lambda x: x[1])
-
-    # display ultimate results
-    print("\n")
-    print("Counting Sort Results: ".center(53))
-    print(f"(Over {numtimes} iterations)".center(52))
-    print("-"*53)
-    print(f"Average time: {avg / numtimes:<12.10f} | Average size:    {avgsize / numtimes:>6.2f}")
-    print(f"Worst time:   {maxtime[1]:<12.10f} | Size:             {maxtime[0]:>6}")
-    print(f"Best time:    {mintime[1]:<12.10f} | Size:             {mintime[0]:>6}")
-    print("-" * 53)
-# -------------------------------------------------------------
-measureexecution()
+measureexecution(countsort)
 
