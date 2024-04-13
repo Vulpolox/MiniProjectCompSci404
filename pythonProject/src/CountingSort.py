@@ -52,5 +52,3 @@ def count_sort(lst: list) -> list:
 
     return sorted_lst
 
-MeasureExecution.measure_execution(count_sort, ListGenerator.get_data(1000))
-
