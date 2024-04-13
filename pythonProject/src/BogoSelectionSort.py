@@ -31,7 +31,7 @@ def bogo_selection_sort(lst: list) -> None:
     for i in range(len(lst)-1):
         for j in range((i+1), len(lst)):
             pertinent_lst = lst[(i+1):]
-            min_index = bogo_find_min(pertinent_lst)
+            min_index = bogo_find_min(pertinent_lst) + i
             print(pertinent_lst)
             if lst[i] > lst[min_index]:
                 swap(lst, i, min_index)
@@ -39,4 +39,4 @@ def bogo_selection_sort(lst: list) -> None:
 
 test_lst = [3, 2 ,1]
 bogo_selection_sort(test_lst)
-#print(test_lst)
+print(test_lst)
