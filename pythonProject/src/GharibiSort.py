@@ -1,4 +1,5 @@
-
+import CountingSort
+import QuickSort
 import random
 def merge(arr1, arr2):
     n1 = len(arr1)
