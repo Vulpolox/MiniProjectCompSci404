@@ -3,13 +3,13 @@
 import random
 import time
 
-random.seed(time.time()) # seed the random number
+random.seed(time.time())  # seed the random number
 
 
 # pre  -- takes no arguments
 # post -- returns a list of a random size between 10 and 100 containing random integers
 def rand_list() -> list:
-    size = random.randint(10, 100) # create a random list size (10-100)
+    size = random.randint(10, 100)  # create a random list size (10-100)
     lst = []
 
     for i in range(size):
