@@ -5,7 +5,7 @@ import MeasureExecution
 import GharibiSort
 
 if __name__ == '__main__':
-    test_data = ListGenerator.get_data(100)  # test data -- contains 10 random
+    test_data = ListGenerator.get_data(100)  # test data -- contains 100 random
 
     print("                    Quick Sort Test\n                  -==================-\n")
 
