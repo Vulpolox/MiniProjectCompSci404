@@ -30,7 +30,7 @@ def rand_list_const_size(size: int) -> list:
 
 
 # pre  -- takes integer representing size of data
-# post -- returns a list of randomly generated lists
+# post -- returns a list of randomly generated lists of integers
 def get_data(size: int) -> list:
     lst = []
     for i in range(size):
